@@ -1,0 +1,3275 @@
+paths:
+  '/Users/{id}/accessTokens/{fk}':
+    get:
+      tags:
+        - User
+      summary: Find a related item by id for accessTokens.
+      operationId: User.prototype.__findById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - User
+      summary: Delete a related item by id for accessTokens.
+      operationId: User.prototype.__destroyById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+    put:
+      tags:
+        - User
+      summary: Update a related item by id for accessTokens.
+      operationId: User.prototype.__updateById__accessTokens
+      parameters:
+        - name: fk
+          in: path
+          description: Foreign key for accessTokens
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+  '/Users/{id}/accessTokens':
+    get:
+      tags:
+        - User
+      summary: Queries accessTokens of User.
+      operationId: User.prototype.__get__accessTokens
+      parameters:
+        - name: filter
+          in: query
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/AccessToken'
+      deprecated: false
+    post:
+      tags:
+        - User
+      summary: Creates a new instance in accessTokens of this model.
+      operationId: User.prototype.__create__accessTokens
+      parameters:
+        - name: data
+          in: body
+          required: false
+          schema:
+            $ref: '#/definitions/AccessToken'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/AccessToken'
+      deprecated: false
+    delete:
+      tags:
+        - User
+      summary: Deletes all accessTokens of this model.
+      operationId: User.prototype.__delete__accessTokens
+      parameters:
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Users/{id}/accessTokens/count':
+    get:
+      tags:
+        - User
+      summary: Counts accessTokens of User.
+      operationId: User.prototype.__count__accessTokens
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Users:
+    post:
+      tags:
+        - User
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: User.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+    patch:
+      tags:
+        - User
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: User.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+    put:
+      tags:
+        - User
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: User.replaceOrCreate__put_Users
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+    get:
+      tags:
+        - User
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: User.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/User'
+      deprecated: false
+  /Users/replaceOrCreate:
+    post:
+      tags:
+        - User
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: User.replaceOrCreate__post_Users_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+  /Users/upsertWithWhere:
+    post:
+      tags:
+        - User
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: User.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+  '/Users/{id}/exists':
+    get:
+      tags:
+        - User
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'User.exists__get_Users_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Users/{id}':
+    head:
+      tags:
+        - User
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'User.exists__head_Users_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - User
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: User.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+    put:
+      tags:
+        - User
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'User.replaceById__put_Users_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+    delete:
+      tags:
+        - User
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: User.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - User
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: User.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/User'
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+  '/Users/{id}/replace':
+    post:
+      tags:
+        - User
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'User.replaceById__post_Users_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+  /Users/findOne:
+    get:
+      tags:
+        - User
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: User.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/User'
+      deprecated: false
+  /Users/update:
+    post:
+      tags:
+        - User
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: User.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Users/count:
+    get:
+      tags:
+        - User
+      summary: Count instances of the model matched by where from the data source.
+      operationId: User.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Users/login:
+    post:
+      tags:
+        - User
+      summary: Login a user with username/email and password.
+      operationId: User.login
+      parameters:
+        - name: credentials
+          in: body
+          required: true
+          schema:
+            type: object
+        - name: include
+          in: query
+          description: >-
+            Related objects to include in the response. See the description of
+            return value for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: >+
+              The response body contains properties of the AccessToken created
+              on login.
+
+              Depending on the value of `include` parameter, the body may
+              contain additional properties:
+
+
+
+
+
+
+
+                - `user` - `U+007BUserU+007D` - Data of the currently logged in
+
+              user. (`include=user`)
+
+
+            type: object
+      deprecated: false
+  /Users/logout:
+    post:
+      tags:
+        - User
+      summary: Logout a user with access token.
+      operationId: User.logout
+      parameters: []
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  '/Users/{id}/verify':
+    post:
+      tags:
+        - User
+      summary: Trigger user's identity verification with configured verifyOptions
+      operationId: User.prototype.verify
+      parameters:
+        - name: id
+          in: path
+          description: User id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /Users/confirm:
+    get:
+      tags:
+        - User
+      summary: Confirm a user registration with identity verification token.
+      operationId: User.confirm
+      parameters:
+        - name: uid
+          in: query
+          required: true
+          type: string
+        - name: token
+          in: query
+          required: true
+          type: string
+        - name: redirect
+          in: query
+          required: false
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /Users/reset:
+    post:
+      tags:
+        - User
+      summary: Reset password for a user with email.
+      operationId: User.resetPassword
+      parameters:
+        - name: options
+          in: body
+          required: true
+          schema:
+            type: object
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /Users/change-password:
+    post:
+      tags:
+        - User
+      summary: Change a user's password.
+      operationId: User.changePassword
+      parameters:
+        - name: oldPassword
+          in: formData
+          required: true
+          type: string
+        - name: newPassword
+          in: formData
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /Users/reset-password:
+    post:
+      tags:
+        - User
+      summary: Reset user's password via a password-reset token.
+      operationId: User.setPassword
+      parameters:
+        - name: newPassword
+          in: formData
+          required: true
+          type: string
+      responses:
+        '204':
+          description: Request was successful
+      deprecated: false
+  /Notes:
+    post:
+      tags:
+        - Note
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Note.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+    patch:
+      tags:
+        - Note
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Note.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+    put:
+      tags:
+        - Note
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Note.replaceOrCreate__put_Notes
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+    get:
+      tags:
+        - Note
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Note.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Note'
+      deprecated: false
+  /Notes/replaceOrCreate:
+    post:
+      tags:
+        - Note
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Note.replaceOrCreate__post_Notes_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+  /Notes/upsertWithWhere:
+    post:
+      tags:
+        - Note
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Note.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+  '/Notes/{id}/exists':
+    get:
+      tags:
+        - Note
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Note.exists__get_Notes_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Notes/{id}':
+    head:
+      tags:
+        - Note
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Note.exists__head_Notes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Note
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Note.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+    put:
+      tags:
+        - Note
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Note.replaceById__put_Notes_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+    delete:
+      tags:
+        - Note
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Note.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Note
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Note.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Note'
+        - name: id
+          in: path
+          description: Note id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+  '/Notes/{id}/replace':
+    post:
+      tags:
+        - Note
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Note.replaceById__post_Notes_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+  /Notes/findOne:
+    get:
+      tags:
+        - Note
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Note.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Note'
+      deprecated: false
+  /Notes/update:
+    post:
+      tags:
+        - Note
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Note.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Note'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Notes/count:
+    get:
+      tags:
+        - Note
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Note.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Addresses:
+    post:
+      tags:
+        - Address
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Address.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    patch:
+      tags:
+        - Address
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Address.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    put:
+      tags:
+        - Address
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Address.replaceOrCreate__put_Addresses
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    get:
+      tags:
+        - Address
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Address.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/replaceOrCreate:
+    post:
+      tags:
+        - Address
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Address.replaceOrCreate__post_Addresses_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/upsertWithWhere:
+    post:
+      tags:
+        - Address
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Address.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  '/Addresses/{id}/exists':
+    get:
+      tags:
+        - Address
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Address.exists__get_Addresses_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Addresses/{id}':
+    head:
+      tags:
+        - Address
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Address.exists__head_Addresses_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Address
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Address.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    put:
+      tags:
+        - Address
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Address.replaceById__put_Addresses_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+    delete:
+      tags:
+        - Address
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Address.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Address
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Address.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+        - name: id
+          in: path
+          description: Address id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  '/Addresses/{id}/replace':
+    post:
+      tags:
+        - Address
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Address.replaceById__post_Addresses_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/findOne:
+    get:
+      tags:
+        - Address
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Address.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Address'
+      deprecated: false
+  /Addresses/update:
+    post:
+      tags:
+        - Address
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Address.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Address'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Addresses/count:
+    get:
+      tags:
+        - Address
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Address.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Patients:
+    post:
+      tags:
+        - Patients
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Patients.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+    patch:
+      tags:
+        - Patients
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Patients.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+    put:
+      tags:
+        - Patients
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Patients.replaceOrCreate__put_Patients
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+    get:
+      tags:
+        - Patients
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Patients.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Patients'
+      deprecated: false
+  /Patients/replaceOrCreate:
+    post:
+      tags:
+        - Patients
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Patients.replaceOrCreate__post_Patients_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+  /Patients/upsertWithWhere:
+    post:
+      tags:
+        - Patients
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Patients.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+  '/Patients/{id}/exists':
+    get:
+      tags:
+        - Patients
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Patients.exists__get_Patients_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Patients/{id}':
+    head:
+      tags:
+        - Patients
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Patients.exists__head_Patients_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Patients
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Patients.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+    put:
+      tags:
+        - Patients
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Patients.replaceById__put_Patients_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+    delete:
+      tags:
+        - Patients
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Patients.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Patients
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Patients.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Patients'
+        - name: id
+          in: path
+          description: Patients id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+  '/Patients/{id}/replace':
+    post:
+      tags:
+        - Patients
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Patients.replaceById__post_Patients_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+  /Patients/findOne:
+    get:
+      tags:
+        - Patients
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Patients.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Patients'
+      deprecated: false
+  /Patients/update:
+    post:
+      tags:
+        - Patients
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Patients.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Patients'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Patients/count:
+    get:
+      tags:
+        - Patients
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Patients.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /Hospitals:
+    post:
+      tags:
+        - Hospitals
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: Hospitals.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+    patch:
+      tags:
+        - Hospitals
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: Hospitals.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+    put:
+      tags:
+        - Hospitals
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Hospitals.replaceOrCreate__put_Hospitals
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+    get:
+      tags:
+        - Hospitals
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: Hospitals.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Hospitals'
+      deprecated: false
+  /Hospitals/replaceOrCreate:
+    post:
+      tags:
+        - Hospitals
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: Hospitals.replaceOrCreate__post_Hospitals_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+  /Hospitals/upsertWithWhere:
+    post:
+      tags:
+        - Hospitals
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: Hospitals.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+  '/Hospitals/{id}/exists':
+    get:
+      tags:
+        - Hospitals
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Hospitals.exists__get_Hospitals_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/Hospitals/{id}':
+    head:
+      tags:
+        - Hospitals
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'Hospitals.exists__head_Hospitals_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - Hospitals
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: Hospitals.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+    put:
+      tags:
+        - Hospitals
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Hospitals.replaceById__put_Hospitals_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+    delete:
+      tags:
+        - Hospitals
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: Hospitals.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - Hospitals
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: Hospitals.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Hospitals'
+        - name: id
+          in: path
+          description: Hospitals id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+  '/Hospitals/{id}/replace':
+    post:
+      tags:
+        - Hospitals
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'Hospitals.replaceById__post_Hospitals_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+  /Hospitals/findOne:
+    get:
+      tags:
+        - Hospitals
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: Hospitals.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/Hospitals'
+      deprecated: false
+  /Hospitals/update:
+    post:
+      tags:
+        - Hospitals
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: Hospitals.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/Hospitals'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /Hospitals/count:
+    get:
+      tags:
+        - Hospitals
+      summary: Count instances of the model matched by where from the data source.
+      operationId: Hospitals.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /BloodBanks:
+    post:
+      tags:
+        - BloodBanks
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: BloodBanks.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+    patch:
+      tags:
+        - BloodBanks
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: BloodBanks.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+    put:
+      tags:
+        - BloodBanks
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BloodBanks.replaceOrCreate__put_BloodBanks
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+    get:
+      tags:
+        - BloodBanks
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: BloodBanks.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  /BloodBanks/replaceOrCreate:
+    post:
+      tags:
+        - BloodBanks
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: BloodBanks.replaceOrCreate__post_BloodBanks_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  /BloodBanks/upsertWithWhere:
+    post:
+      tags:
+        - BloodBanks
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: BloodBanks.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  '/BloodBanks/{id}/exists':
+    get:
+      tags:
+        - BloodBanks
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BloodBanks.exists__get_BloodBanks_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/BloodBanks/{id}':
+    head:
+      tags:
+        - BloodBanks
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'BloodBanks.exists__head_BloodBanks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - BloodBanks
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: BloodBanks.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+    put:
+      tags:
+        - BloodBanks
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BloodBanks.replaceById__put_BloodBanks_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+    delete:
+      tags:
+        - BloodBanks
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: BloodBanks.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - BloodBanks
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: BloodBanks.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BloodBanks'
+        - name: id
+          in: path
+          description: BloodBanks id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  '/BloodBanks/{id}/replace':
+    post:
+      tags:
+        - BloodBanks
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'BloodBanks.replaceById__post_BloodBanks_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  /BloodBanks/findOne:
+    get:
+      tags:
+        - BloodBanks
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: BloodBanks.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/BloodBanks'
+      deprecated: false
+  /BloodBanks/update:
+    post:
+      tags:
+        - BloodBanks
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: BloodBanks.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/BloodBanks'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /BloodBanks/count:
+    get:
+      tags:
+        - BloodBanks
+      summary: Count instances of the model matched by where from the data source.
+      operationId: BloodBanks.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+  /MedicalRecords:
+    post:
+      tags:
+        - MedicalRecords
+      summary: Create a new instance of the model and persist it into the data source.
+      operationId: MedicalRecords.create
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+    patch:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Patch an existing model instance or insert a new one into the data
+        source.
+      operationId: MedicalRecords.patchOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+    put:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: MedicalRecords.replaceOrCreate__put_MedicalRecords
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+    get:
+      tags:
+        - MedicalRecords
+      summary: Find all instances of the model matched by filter from the data source.
+      operationId: MedicalRecords.find
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  /MedicalRecords/replaceOrCreate:
+    post:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Replace an existing model instance or insert a new one into the data
+        source.
+      operationId: MedicalRecords.replaceOrCreate__post_MedicalRecords_replaceOrCreate
+      parameters:
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  /MedicalRecords/upsertWithWhere:
+    post:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Update an existing model instance or insert a new one into the data
+        source based on the where criteria.
+      operationId: MedicalRecords.upsertWithWhere
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  '/MedicalRecords/{id}/exists':
+    get:
+      tags:
+        - MedicalRecords
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'MedicalRecords.exists__get_MedicalRecords_{id}_exists'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+  '/MedicalRecords/{id}':
+    head:
+      tags:
+        - MedicalRecords
+      summary: Check whether a model instance exists in the data source.
+      operationId: 'MedicalRecords.exists__head_MedicalRecords_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              exists:
+                type: boolean
+      deprecated: false
+    get:
+      tags:
+        - MedicalRecords
+      summary: 'Find a model instance by {{id}} from the data source.'
+      operationId: MedicalRecords.findById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields and include - must be a JSON-encoded string
+            ({"something":"value"})
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+    put:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'MedicalRecords.replaceById__put_MedicalRecords_{id}'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+    delete:
+      tags:
+        - MedicalRecords
+      summary: 'Delete a model instance by {{id}} from the data source.'
+      operationId: MedicalRecords.deleteById
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+      deprecated: false
+    patch:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Patch attributes for a model instance and persist it into the data
+        source.
+      operationId: MedicalRecords.prototype.patchAttributes
+      parameters:
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/MedicalRecords'
+        - name: id
+          in: path
+          description: MedicalRecords id
+          required: true
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  '/MedicalRecords/{id}/replace':
+    post:
+      tags:
+        - MedicalRecords
+      summary: >-
+        Replace attributes for a model instance and persist it into the data
+        source.
+      operationId: 'MedicalRecords.replaceById__post_MedicalRecords_{id}_replace'
+      parameters:
+        - name: id
+          in: path
+          description: Model id
+          required: true
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: Model instance data
+          required: false
+          schema:
+            description: Model instance data
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  /MedicalRecords/findOne:
+    get:
+      tags:
+        - MedicalRecords
+      summary: Find first instance of the model matched by filter from the data source.
+      operationId: MedicalRecords.findOne
+      parameters:
+        - name: filter
+          in: query
+          description: >-
+            Filter defining fields, where, include, order, offset, and limit -
+            must be a JSON-encoded string (`{"where":{"something":"value"}}`). 
+            See
+            https://loopback.io/doc/en/lb3/Querying-data.html#using-stringified-json-in-rest-queries
+            for more details.
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            $ref: '#/definitions/MedicalRecords'
+      deprecated: false
+  /MedicalRecords/update:
+    post:
+      tags:
+        - MedicalRecords
+      summary: 'Update instances of the model matched by {{where}} from the data source.'
+      operationId: MedicalRecords.updateAll
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+        - name: data
+          in: body
+          description: An object of model property name/value pairs
+          required: false
+          schema:
+            description: An object of model property name/value pairs
+            $ref: '#/definitions/MedicalRecords'
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            description: Information related to the outcome of the operation
+            type: object
+            properties:
+              count:
+                description: The number of instances updated
+                type: number
+                format: double
+      deprecated: false
+  /MedicalRecords/count:
+    get:
+      tags:
+        - MedicalRecords
+      summary: Count instances of the model matched by where from the data source.
+      operationId: MedicalRecords.count
+      parameters:
+        - name: where
+          in: query
+          description: Criteria to match model instances
+          required: false
+          type: string
+          format: JSON
+      responses:
+        '200':
+          description: Request was successful
+          schema:
+            type: object
+            properties:
+              count:
+                type: number
+                format: double
+      deprecated: false
+definitions:
+  x-any:
+    properties: {}
+  AccessToken:
+    properties:
+      id:
+        type: string
+      ttl:
+        default: 1209600
+        description: time to live in seconds (2 weeks by default)
+        type: number
+        format: double
+      scopes:
+        description: Array of scopes granted to this access token.
+        type: array
+        items:
+          type: string
+      created:
+        type: string
+        format: date-time
+      userId:
+        type: number
+        format: double
+    required:
+      - id
+    additionalProperties: false
+  User:
+    properties:
+      realm:
+        type: string
+      username:
+        type: string
+      email:
+        type: string
+      emailVerified:
+        type: boolean
+      id:
+        type: number
+        format: double
+    required:
+      - email
+    additionalProperties: false
+  Note:
+    properties:
+      content:
+        type: string
+      _id:
+        type: string
+      title:
+        type: string
+    required:
+      - _id
+    additionalProperties: false
+  Address:
+    properties:
+      Street:
+        type: string
+      City:
+        type: string
+      State:
+        type: number
+        format: double
+      Zip:
+        type: number
+        format: double
+      id:
+        type: number
+        format: double
+    additionalProperties: false
+  Patients:
+    properties:
+      ID:
+        type: string
+      FirstName:
+        type: string
+      LastName:
+        type: string
+      Address:
+        type: object
+      DOB:
+        type: string
+        format: date-time
+      Gender:
+        type: string
+      BloodGroup:
+        type: string
+      MedicalRecord:
+        type: object
+    required:
+      - ID
+    additionalProperties: false
+  Hospitals:
+    properties:
+      address:
+        type: object
+      advancedEquipments:
+        type: boolean
+      basicEquipments:
+        type: boolean
+      basicMedicines:
+        type: boolean
+      bedsAvailable:
+        type: number
+        format: double
+      bedsTaken:
+        type: number
+        format: double
+      bloodTypes:
+        type: object
+      bmergencyMedicines:
+        type: boolean
+      id:
+        type: number
+        format: double
+      name:
+        type: string
+      nursesAvailable:
+        type: number
+        format: double
+      orAvailable:
+        type: number
+        format: double
+      roomsAvailable:
+        type: number
+        format: double
+      roomsTaken:
+        type: number
+        format: double
+      specialistsAvailable:
+        type: number
+        format: double
+    required:
+      - id
+    additionalProperties: false
+  BloodBanks:
+    properties:
+      AB_N:
+        type: number
+        format: double
+      AB_P:
+        type: number
+        format: double
+      A_N:
+        type: number
+        format: double
+      A_P:
+        type: number
+        format: double
+      Address:
+        type: object
+      B_N:
+        type: number
+        format: double
+      B_P:
+        type: number
+        format: double
+      ID:
+        type: number
+        format: double
+      Name:
+        type: string
+      O_N:
+        type: number
+        format: double
+      O_P:
+        type: number
+        format: double
+      Phone:
+        type: string
+      id:
+        $ref: '#/definitions/ObjectID'
+    additionalProperties: false
+  MedicalRecords:
+    properties:
+      Allergies:
+        type: string
+      BloodGroup:
+        type: string
+      BloodPressure:
+        type: string
+      BodyTemperature:
+        type: number
+        format: double
+      Medication:
+        type: string
+      Pulse:
+        type: number
+        format: double
+      RSP:
+        type: number
+        format: double
+      id:
+        type: number
+        format: double
+    required:
+      - id
+    additionalProperties: false
+  ObjectID:
+    type: string
+    pattern: '^[a-fA-F\d]{24}$'
+basePath: /api
+swagger: '2.0'
+info:
+  x-ibm-name: ecad
+  version: 1.0.0
+  title: ECAD
+schemes:
+  - https
+  - http
+host: $(catalog.host)
+consumes:
+  - application/json
+produces:
+  - application/json
+securityDefinitions:
+  clientIdHeader:
+    type: apiKey
+    in: header
+    name: X-IBM-Client-Id
+  clientSecretHeader:
+    in: header
+    name: X-IBM-Client-Secret
+    type: apiKey
+security:
+  - clientIdHeader: []
+    clientSecretHeader: []
+x-ibm-configuration:
+  testable: true
+  enforced: true
+  cors:
+    enabled: true
+  catalogs:
+    apic-dev:
+      properties:
+        runtime-url: $(TARGET_URL)
+    sb:
+      properties:
+        runtime-url: 'http://localhost:4001'
+    ecad:
+      properties:
+        runtime-url: 'https://seattleah.apic.mybluemix.net'
+        invoke-tls-profile: 'client:Loopback-client'
+  assembly:
+    execute:
+      - invoke:
+          target-url: $(runtime-url)$(request.path)$(request.search)
+          tls-profile: $(invoke-tls-profile)
+  gateway: datapower-gateway
+  properties:
+    runtime-url:
+      value: ''
+      description: ''
+      encoded: false
+    invoke-tls-profile:
+      value: ''
+      description: ''
+      encoded: false

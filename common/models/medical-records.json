@@ -1,0 +1,48 @@
+{
+  "name": "MedicalRecords",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Allergies": {
+      "type": "string",
+      "required": false
+    },
+    "BloodGroup": {
+      "type": "string",
+      "required": false
+    },
+    "BloodPressure": {
+      "type": "string",
+      "required": false
+    },
+    "BodyTemperature": {
+      "type": "number",
+      "required": false
+    },
+    "Medication": {
+      "type": "string",
+      "required": false
+    },
+    "Pulse": {
+      "type": "number",
+      "required": false
+    },
+    "RSP": {
+      "type": "number",
+      "required": false
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "isArray": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

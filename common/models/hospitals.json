@@ -1,0 +1,77 @@
+{
+  "name": "Hospitals",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "address": {
+      "type": "object",
+      "required": false
+    },
+    "advancedEquipments": {
+      "type": "boolean",
+      "required": false
+    },
+    "basicEquipments": {
+      "type": "boolean",
+      "required": false
+    },
+    "basicMedicines": {
+      "type": "boolean",
+      "required": false
+    },
+    "bedsAvailable": {
+      "type": "number",
+      "required": false
+    },
+    "bedsTaken": {
+      "type": "number",
+      "required": false
+    },
+    "bloodTypes": {
+      "type": "object",
+      "required": false
+    },
+    "bmergencyMedicines": {
+      "type": "boolean",
+      "required": false
+    },
+    "id": {
+      "type": "number",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "name": {
+      "type": "string",
+      "required": false,
+      "index": true
+    },
+    "nursesAvailable": {
+      "type": "number",
+      "required": false
+    },
+    "orAvailable": {
+      "type": "number",
+      "required": false
+    },
+    "roomsAvailable": {
+      "type": "number",
+      "required": false
+    },
+    "roomsTaken": {
+      "type": "number",
+      "required": false
+    },
+    "specialistsAvailable": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

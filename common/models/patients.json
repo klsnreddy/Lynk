@@ -1,0 +1,50 @@
+{
+  "name": "Patients",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID": {
+      "type": "string",
+      "id": true,
+      "required": true,
+      "isArray": false
+    },
+    "FirstName": {
+      "type": "string",
+      "required": false,
+      "index": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": false,
+      "index": true
+    },
+    "Address": {
+      "type": "object",
+      "required": false
+    },
+    "DOB": {
+      "type": "date",
+      "required": false
+    },
+    "Gender": {
+      "type": "string",
+      "required": false
+    },
+    "BloodGroup": {
+      "type": "string",
+      "required": false
+    },
+    "MedicalRecord": {
+      "type": "object",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

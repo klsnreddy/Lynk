@@ -1,0 +1,62 @@
+{
+  "name": "BloodBanks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "AB_N": {
+      "type": "number",
+      "required": false
+    },
+    "AB_P": {
+      "type": "number",
+      "required": false
+    },
+    "A_N": {
+      "type": "number",
+      "required": false
+    },
+    "A_P": {
+      "type": "number",
+      "required": false
+    },
+    "Address": {
+      "type": "object",
+      "required": false
+    },
+    "B_N": {
+      "type": "number",
+      "required": false
+    },
+    "B_P": {
+      "type": "number",
+      "required": false
+    },
+    "ID": {
+      "type": "number",
+      "required": false
+    },
+    "Name": {
+      "type": "string",
+      "required": false
+    },
+    "O_N": {
+      "type": "number",
+      "required": false
+    },
+    "O_P": {
+      "type": "number",
+      "required": false
+    },
+    "Phone": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
